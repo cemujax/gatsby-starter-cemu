@@ -1,0 +1,19 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 39rem;
+  padding: 2.4375rem 1.21875rem;
+}
