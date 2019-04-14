@@ -1,26 +1,18 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import { Layout } from '../layout'
 import SEO from '../components/seo'
+import { Layout } from '../layout'
+import PostList from '../components/post/PostList'
 
 const IndexPage = ({ data }) => {
   const { siteMetadata } = data.site
-  const { edges: posts } = data.allMarkdownRemark
+  const { edges } = data.allMarkdownRemark
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <p>Welcome to My site.</p>
-
-      {posts.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node.frontmatter.path}>
-            <h3>{node.frontmatter.title}</h3>
-          </Link>
-          <p>{node.frontmatter.date}</p>
-          <p>{node.excerpt}</p>
-        </div>
-      ))}
+      <PostList posts={edges} />
     </Layout>
   )
 }
@@ -41,6 +33,7 @@ export const query = graphql`
             path
             title
             date(formatString: "YYYY-MM-DD")
+            tags
           }
           excerpt(pruneLength: 160)
         }
