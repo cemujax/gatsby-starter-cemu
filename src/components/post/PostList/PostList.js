@@ -5,7 +5,7 @@ import './PostList.scss'
 
 const PostItem = ({ id, path, title, body, date, tags }) => {
   return (
-    <div className="post-item">
+    <div className="post-item" key={id}>
       <Link to={path}>
         <h2>{title}</h2>
         <p className="date">{date}</p>

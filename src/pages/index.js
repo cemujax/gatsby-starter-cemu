@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <p>Welcome to My site.</p>
+      <p>Welcome to {siteMetadata.title}</p>
       <PostList posts={edges} />
     </Layout>
   )

@@ -4,13 +4,17 @@ import { graphql } from 'gatsby'
 import { Layout } from '../layout'
 import SEO from '../components/seo'
 
-export default ({ data }) => (
-  <Layout>
-    <SEO title="About" keywords={['about', 'github']} />
-    <h1>About </h1>
-    <p>About Page</p>
-  </Layout>
-)
+const AboutPage = ({ data }) => {
+  const { siteMetadata } = data.site
+
+  return (
+    <Layout>
+      <SEO title="About" keywords={['about', 'github']} />
+      <h1>About </h1>
+      <p>About {siteMetadata.title}</p>
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query AboutQuery {
@@ -21,3 +25,4 @@ export const query = graphql`
     }
   }
 `
+export default AboutPage
