@@ -1,12 +1,9 @@
 ---
-path: '/post-two'
-date: '2019-04-14'
-title: 'Second Post'
-draft: false
-tags: ['gatsby', 'other']
+title: 'react1'
+date: '2019-04-13T02:00'
+category: 'react'
+tags: ['react', 'etc']
 ---
-
-# This is Second POst
 
 ## Lorem Ipsum
 

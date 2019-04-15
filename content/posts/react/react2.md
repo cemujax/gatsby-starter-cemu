@@ -1,12 +1,9 @@
 ---
-path: '/post-one'
-date: '2019-04-13'
-title: 'First Post'
-draft: false
-tags: ['gatsby', 'other']
+title: 'react2'
+date: '2019-04-13T18:00'
+category: 'react'
+tags: ['react', 'etc']
 ---
-
-# This is First POst
 
 ## Lorem Ipsum
 
