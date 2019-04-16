@@ -4,11 +4,9 @@ import './footer.scss'
 
 const Footer = () => (
   <footer className="footer">
-    <hr />© cemujax, Built with
+    <hr />©<a href="https://github.com/cemujax">cemujax</a>, Built with
     {` `}
-    <a href="https://github.com/cemujax/gatsby-starter-cemu">
-      gatsby-starter-cemu
-    </a>
+    <a href="https://www.gatsbyjs.org/">Gatsby</a>
   </footer>
 )
 
