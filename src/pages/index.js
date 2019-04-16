@@ -10,8 +10,10 @@ const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <p>Welcome to {siteMetadata.title}</p>
+      <SEO
+        title="Home"
+        keywords={[`${siteMetadata.title}`, `${siteMetadata.author}`]}
+      />
       <PostList posts={edges} />
     </Layout>
   )
@@ -29,13 +31,16 @@ export const query = graphql`
       edges {
         node {
           id
-          frontmatter {
-            path
-            title
-            date(formatString: "YYYY-MM-DD")
-            tags
+          fields {
+            slug
           }
           excerpt(pruneLength: 160)
+          frontmatter {
+            title
+            date(formatString: "YYYY-MM-DD")
+            category
+            tags
+          }
         }
       }
     }
