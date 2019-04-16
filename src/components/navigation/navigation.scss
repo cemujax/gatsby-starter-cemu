@@ -1,0 +1,32 @@
+.navigation {
+  margin: 0 auto;
+  max-width: 39rem;
+  padding: 1.51875rem 1.21875rem;
+  text-align: center;
+  position: relative;
+
+  .nav-list {
+    li {
+      display: inline-block;
+      position: relative;
+      padding: 3px 1.5rem;
+    }
+    a:before {
+      content: '#';
+      color: #ce1458;
+      position: absolute;
+      left: 0.05em;
+      top: 0.14em;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    a {
+      color: #000000;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+        color: #ce1458;
+      }
+    }
+  }
+}
