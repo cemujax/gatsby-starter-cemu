@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/header'
+import Navigation from '../components/navigation'
 import Footer from '../components/footer'
 
 import './layout.scss'
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
           siteTitle={data.site.siteMetadata.title}
           github={data.site.siteMetadata.github}
         />
+        <Navigation />
         <div className="wrapper">
           <main>{children}</main>
           <Footer />

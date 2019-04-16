@@ -1,34 +1,13 @@
-.header {
-  nav {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0px auto;
-    padding: 1.5em 0px;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  li {
-    display: inline-block;
-    margin-left: 1em;
-    padding: 0 1em 0 1em;
-    &:first-child {
-      position: relative;
-      margin: 0;
-      flex-basis: 100%;
-    }
-  }
-
+header {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 3px 3px 1px #aaa;
   a {
-    text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: 600;
-    transition: all 0.2s;
     &:hover {
-      color: #333;
+      color: #464646;
     }
   }
 }
