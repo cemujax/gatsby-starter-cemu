@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SEO from '../components/seo'
-import { Layout } from '../layout'
+import Layout from '../layout'
 import TagList from '../components/tag/TagList'
 
 const TagsPage = ({ pageContext }) => {
