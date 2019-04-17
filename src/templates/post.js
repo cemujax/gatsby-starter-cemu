@@ -4,11 +4,20 @@ import { graphql } from 'gatsby'
 import Layout from '../layout'
 import TagList from '../components/tag/TagList'
 import PostNavigator from '../components/post-navigator'
+import { DiscussionEmbed } from 'disqus-react'
 
 const Post = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const html = post.html
   const { title, date, tags } = post.frontmatter
+
+  const { disqusShortname } = data.site.siteMetadata.comments
+  const disqusConfig = {
+    url: data.site.siteMetadata.siteUrl + pageContext.pathSlug,
+    identifier: post.id,
+    title,
+  }
+
   return (
     <Layout>
       <h1>{title}</h1>
@@ -17,12 +26,26 @@ const Post = ({ data, pageContext }) => {
 
       <TagList tags={tags || []} />
       <PostNavigator pageContext={pageContext} />
+
+      {!!disqusShortname && (
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      )}
     </Layout>
   )
 }
 
 export const query = graphql`
   query($pathSlug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+        siteUrl
+        comments {
+          disqusShortname
+        }
+      }
+    }
     markdownRemark(fields: { slug: { eq: $pathSlug } }) {
       id
       html
