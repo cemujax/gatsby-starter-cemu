@@ -3,8 +3,9 @@ import { graphql } from 'gatsby'
 
 import Layout from '../layout'
 import TagList from '../components/tag/TagList'
+import PostNavigator from '../components/post-navigator'
 
-const Post = ({ data }) => {
+const Post = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const html = post.html
   const { title, date, tags } = post.frontmatter
@@ -15,6 +16,7 @@ const Post = ({ data }) => {
       <div dangerouslySetInnerHTML={{ __html: html }} />
 
       <TagList tags={tags || []} />
+      <PostNavigator pageContext={pageContext} />
     </Layout>
   )
 }
