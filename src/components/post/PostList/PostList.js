@@ -1,18 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import PostHeader from '../PostHeader'
 import './PostList.scss'
 
 const PostItem = ({ id, path, title, body, date, category }) => {
   return (
     <div className="post-item" key={id}>
       <Link to={path}>
-        <h2>{title}</h2>
-        <p className="date">{date}</p>
-        <p>{body}</p>
-        <p>
-          <span className="category">{category}</span>
-        </p>
+        <PostHeader title={title} date={date} category={category} />
+        <p className="body">{body}</p>
       </Link>
     </div>
   )

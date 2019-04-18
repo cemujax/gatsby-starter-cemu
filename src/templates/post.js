@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layout'
+import PostHeader from '../components/post/PostHeader'
 import TagList from '../components/tag/TagList'
 import PostNavigator from '../components/post-navigator'
 import { DiscussionEmbed } from 'disqus-react'
@@ -20,8 +21,8 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <PostHeader title={title} date={date} />
+      <hr />
       <div dangerouslySetInnerHTML={{ __html: html }} />
 
       <TagList tags={tags || []} />

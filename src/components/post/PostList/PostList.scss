@@ -1,36 +1,21 @@
 .post-list {
   .post-item {
-    padding: 1.5rem;
+    padding: 1rem;
     transition: all 0.15s ease-in;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     outline: none;
     border-radius: 0.2rem;
     border: 1px solid lightgray;
-    a {
-      h2 {
-        font-size: 2rem;
-        font-weight: 500;
-        margin: 0;
-      }
-      transition: all 0.15s ease-in;
-      border-bottom: 1px solid transparent;
-      text-decoration: none;
-      color: black;
-      p {
-        font-weight: 300;
-      }
 
-      .date {
-        font-size: 1rem;
-      }
-      .category {
-        color: #ffffff;
-        background: rgb(29, 140, 209);
-        padding: 0.1rem 0.5rem;
-        border-radius: 1rem;
+    a {
+      color: black;
+      .body {
+        margin-top: 0;
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 1.5;
       }
     }
-
     &:hover {
       background: rgba(#333, 0.05);
     }
