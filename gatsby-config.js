@@ -1,15 +1,15 @@
+const siteMetaConfig = require('./site-meta-config')
+
 module.exports = {
-  siteMetadata: {
-    title: `Starter-cemu`,
-    description: `Gatsby Starter Theme`,
-    author: `cemujax`,
-    siteUrl: `https://gatsby-starter-cemu.netlify.com`,
-    comments: {
-      disqusShortname: `gatsby-starter-cemu`,
-    },
-    github: `https://github.com/cemujax`,
-  },
+  siteMetadata: siteMetaConfig,
   plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,13 +18,33 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts`,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 400,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '%',
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
       },
     },
-    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

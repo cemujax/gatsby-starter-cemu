@@ -7,6 +7,8 @@ import TagList from '../components/tag/TagList'
 import PostNavigator from '../components/post-navigator'
 import { DiscussionEmbed } from 'disqus-react'
 
+import 'prismjs/themes/prism-okaidia.css'
+
 const Post = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const html = post.html
