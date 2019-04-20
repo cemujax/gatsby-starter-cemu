@@ -13,4 +13,5 @@ module.exports = {
     twitter: `https://twitter.com`, // Your twitter
     facebook: `https://www.facebook.com`, // Your facebook
   },
+  ga: `UA-138652941-1`, // Your Google Analytics Tracking ID ex) UA-XXXXXXXXX-X
 }

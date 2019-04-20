@@ -53,6 +53,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: siteMetaConfig.ga,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: siteMetaConfig.title,
