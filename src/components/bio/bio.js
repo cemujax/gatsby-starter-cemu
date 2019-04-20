@@ -27,7 +27,7 @@ const Bio = () => (
                   <a href={`${social.github}`}>
                     <svg
                       stroke="currentColor"
-                      fill="currentColor"
+                      fill="#333"
                       strokeWidth="0"
                       viewBox="0 0 496 512"
                       size="32"
@@ -42,7 +42,7 @@ const Bio = () => (
                   <a href={`${social.twitter}`}>
                     <svg
                       stroke="currentColor"
-                      fill="currentColor"
+                      fill="rgb(0, 172, 237)"
                       strokeWidth="0"
                       viewBox="0 0 448 512"
                       size="32"
@@ -57,7 +57,7 @@ const Bio = () => (
                   <a href={`${social.facebook}`}>
                     <svg
                       stroke="currentColor"
-                      fill="currentColor"
+                      fill="rgb(59, 89, 152)"
                       strokeWidth="0"
                       viewBox="0 0 448 512"
                       size="32"
