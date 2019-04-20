@@ -1,10 +1,13 @@
 module.exports = {
+  pathPrefix: `/`,
   title: `Starter-cemu`,
   description: `Gatsby Starter Theme`,
   author: `cemujax`,
   introduction: `introduction`,
   siteUrl: `https://gatsby-starter-cemu.netlify.com`,
   icon: `static/icon.png`, // favicon
+  backgroundColor: `#ffffff`,
+  themeColor: `#2196F3`,
   comments: {
     disqusShortname: `gatsby-starter-cemu`,
   },
