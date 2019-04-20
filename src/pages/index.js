@@ -27,7 +27,10 @@ export const query = graphql`
         author
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { category: { ne: null } } }
+    ) {
       edges {
         node {
           id

@@ -5,6 +5,7 @@ import Layout from '../layout'
 import PostHeader from '../components/post/PostHeader'
 import TagList from '../components/tag/TagList'
 import PostNavigator from '../components/post-navigator'
+import Bio from '../components/bio'
 import { DiscussionEmbed } from 'disqus-react'
 
 import 'prismjs/themes/prism-okaidia.css'
@@ -29,7 +30,7 @@ const Post = ({ data, pageContext }) => {
 
       <TagList tags={tags || []} />
       <PostNavigator pageContext={pageContext} />
-
+      <Bio />
       {!!disqusShortname && (
         <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       )}

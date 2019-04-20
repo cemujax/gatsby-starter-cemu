@@ -16,17 +16,13 @@ const Layout = ({ children }) => (
           siteMetadata {
             title
             author
-            github
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          github={data.site.siteMetadata.github}
-        />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <Navigation />
         <div className="wrapper">
           <main>{children}</main>
