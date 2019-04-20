@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../layout'
 import PostHeader from '../components/post/PostHeader'
 import TagList from '../components/tag/TagList'
-import PostNavigator from '../components/post-navigator'
+import PostNavigator from '../components/post/PostNavigator'
 import Bio from '../components/bio'
 import { DiscussionEmbed } from 'disqus-react'
 
