@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import SEO from '../components/seo'
 import Layout from '../layout'
 import PostHeader from '../components/post/PostHeader'
 import TagList from '../components/tag/TagList'
@@ -24,6 +25,13 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO
+        title={title}
+        description={post.excerpt || ' '}
+        pathSlug={pageContext.pathSlug}
+        datePublished={date}
+        isPost
+      />
       <PostHeader title={title} date={date} />
       <hr />
       <div dangerouslySetInnerHTML={{ __html: html }} />

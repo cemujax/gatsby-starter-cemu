@@ -12,7 +12,11 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO
         title="Home"
-        keywords={[`${siteMetadata.title}`, `${siteMetadata.author}`]}
+        keywords={[
+          `${siteMetadata.title}`,
+          `${siteMetadata.author}`,
+          `${siteMetadata.description}`,
+        ]}
       />
       <PostList posts={edges} />
     </Layout>
@@ -25,6 +29,7 @@ export const query = graphql`
       siteMetadata {
         title
         author
+        description
       }
     }
     allMarkdownRemark(

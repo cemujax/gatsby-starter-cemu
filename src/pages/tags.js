@@ -8,7 +8,7 @@ const TagsPage = ({ pageContext }) => {
   const { tags } = pageContext
   return (
     <Layout>
-      <SEO title="tags" keywords={tags} />
+      <SEO title="tags" keywords={tags} pathSlug="/tags" />
       <h2>All Tags</h2>
       <TagList tags={tags} />
     </Layout>

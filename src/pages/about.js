@@ -9,7 +9,7 @@ const AboutPage = ({ data }) => {
   const { node: about } = data.allMarkdownRemark.edges[0]
   return (
     <Layout>
-      <SEO title="About" keywords={['about', 'github']} />
+      <SEO title="About Page" pathSlug="/about" />
       <Bio />
       <div dangerouslySetInnerHTML={{ __html: about.html }} />
     </Layout>

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import SEO from '../components/seo'
 import Layout from '../layout'
 import PostList from '../components/post/PostList'
 
@@ -13,9 +14,12 @@ const Tag = ({ pageContext }) => {
   })
   return (
     <Layout>
+      <SEO title={tagName} pathSlug={`/tags/${tagName}`} />
       <div>
         <div>
-          Tag:{`${tagName}`} - {posts.length} posts
+          <h1>
+            {tagName}({posts.length})
+          </h1>
         </div>
         <div>
           <PostList posts={posts} />
