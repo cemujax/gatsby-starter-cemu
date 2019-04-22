@@ -1,19 +1,20 @@
+@import '../../../styles/init.scss';
+
 .tag-list {
-  margin: 1rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 
   a {
-    text-decoration: none;
-    color: rgb(82, 85, 94);
-    background: rgba(51, 52, 56, 0.1);
-    padding: 0.25rem 0.85rem;
-    border-radius: 0.4rem;
-    margin: 0.3rem 0.6rem 0.3rem 0px;
+    border: 1px solid $color-black;
+    @include border-radius(0.2rem);
+    margin: 0 0.5rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 15px;
     &:hover {
-      color: #fafafa;
+      color: $color-red-violet;
     }
   }
 }

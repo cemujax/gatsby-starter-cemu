@@ -1,13 +1,14 @@
+@import '../../styles/init.scss';
+
 header {
   width: 100%;
   padding: 1rem 0;
   text-align: center;
-  box-shadow: 0 3px 3px 1px #aaa;
+  @include box-shadow(4);
   a {
-    color: #000000;
     font-weight: 600;
     &:hover {
-      color: #464646;
+      color: $color-dark-gray;
     }
   }
 }

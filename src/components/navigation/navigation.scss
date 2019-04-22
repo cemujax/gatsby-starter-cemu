@@ -1,9 +1,8 @@
+@import '../../styles/init.scss';
+
 .navigation {
-  margin: 0 auto;
-  max-width: 39rem;
-  padding: 1.51875rem 1.21875rem;
+  @include main-wrapper(0.3rem);
   text-align: center;
-  position: relative;
 
   .nav-list {
     li {
@@ -13,19 +12,20 @@
     }
     a:before {
       content: '#';
-      color: #ce1458;
+      color: $color-red-violet;
       position: absolute;
       left: 0.05em;
       top: 0.14em;
-      font-size: 1.1em;
-      font-weight: bold;
+      font: {
+        size: 1.1em;
+        weight: 600;
+      }
     }
     a {
-      color: #000000;
       font-weight: 500;
       &:hover {
         text-decoration: underline;
-        color: #ce1458;
+        color: $color-red-violet;
       }
     }
   }

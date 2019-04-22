@@ -1,18 +1,24 @@
+@import '../../../styles/init.scss';
+
 .post-list {
   .post-item {
-    padding: 1rem;
+    padding: 0.7rem;
     transition: all 0.15s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+    @include box-shadow(3);
+    @include border-radius(0.2rem);
+    @include border-default();
     outline: none;
-    border-radius: 0.2rem;
-    border: 1px solid lightgray;
 
     a {
-      color: black;
       .body {
-        margin-top: 0;
-        font-weight: 300;
-        font-size: 17px;
+        margin: {
+          top: 0;
+          left: 5px;
+        }
+        font: {
+          size: 15px;
+          weight: 300;
+        }
         line-height: 1.5;
       }
     }
@@ -21,6 +27,6 @@
     }
   }
   .post-item + .post-item {
-    border-top: 1px solid lightgray;
+    border-top: 1px solid $color-light-gray;
   }
 }

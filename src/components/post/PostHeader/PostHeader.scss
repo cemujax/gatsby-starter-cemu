@@ -1,23 +1,31 @@
+@import '../../../styles/init.scss';
+
 .post-header {
   word-break: break-all;
   .title {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 40px;
-    font-weight: 600;
+    font: {
+      family: 'Segoe UI', sans-serif;
+      size: 40px;
+      weight: 600;
+    }
     margin: 5px;
   }
   .post-header-sub {
     display: flex;
+    margin-left: 5px;
     .date {
-      font-size: 20px;
-      font-weight: 300;
+      font: {
+        size: 16px;
+        weight: 300;
+      }
     }
     .category {
       margin-left: 1rem;
-      color: #ffffff;
-      background: rgb(29, 140, 209);
+      color: $color-white;
+      @include border-radius(0.2rem);
+      border: 1px solid #f88307;
+      background: $color-orange;
       padding: 0.1rem 0.2rem;
-      border-radius: 3px;
     }
   }
 }

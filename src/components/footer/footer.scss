@@ -1,22 +1,25 @@
+@import '../../styles/init.scss';
+
 .footer {
   text-align: center;
-  font-size: 15px;
-  font-weight: 300;
   padding-top: 30px;
+  font: {
+    size: 15px;
+    weight: 300;
+  }
 
   .rss-feed {
     margin-top: 1rem;
   }
   hr {
-    background: #dcdcdc;
-    border: none;
+    background: $color-light-gray;
+    border: 0;
     height: 1px;
   }
   a {
-    color: #000000;
     font-weight: 500;
     &:hover {
-      color: #ce1458;
+      color: $color-red-violet;
     }
   }
 }

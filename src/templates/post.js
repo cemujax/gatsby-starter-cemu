@@ -33,7 +33,7 @@ const Post = ({ data, pageContext }) => {
         isPost
       />
       <PostHeader title={title} date={date} />
-      <hr />
+      <hr style={{ background: 'lightgray', border: 0, height: '1px' }} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
 
       <TagList tags={tags || []} />

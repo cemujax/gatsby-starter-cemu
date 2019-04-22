@@ -1,9 +1,11 @@
+@import '../../styles/init.scss';
+
 .bio {
   display: flex;
   padding: 0.7rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
-  border-radius: 0.2rem;
-  border: 1px solid lightgray;
+  @include box-shadow(3);
+  @include border-radius(0.5rem);
+  @include border-default();
   margin-bottom: 30px;
 
   .author-image {
@@ -17,25 +19,26 @@
 
     .author-name {
       display: inline-block;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 30px;
-      font-weight: 600;
+      font: {
+        family: 'Segoe UI', sans-serif;
+        size: 30px;
+        weight: 600;
+      }
     }
 
     .author-introduction {
       margin-top: 5px;
-      font-size: 15px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.4;
     }
 
     .author-socials {
       margin-top: 5px;
     }
     a {
-      color: #000000;
       margin-right: 10px;
       &:hover {
-        color: #ce1458;
+        color: $color-red-violet;
       }
       &.visited {
         text-decoration: none;
