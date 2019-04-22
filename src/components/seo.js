@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import favicon from '../../static/icon.png'
+import favicon from '../../static/favicon.ico'
 
 function SEO({
   description,
@@ -137,8 +137,8 @@ function SEO({
           )
           .concat(meta)}
         link={[
-          { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
-          { rel: 'icon', type: 'image/png', href: `${favicon}` },
+          { rel: 'shortcut icon', type: 'image/x-icon', href: `${favicon}` },
+          { rel: 'icon', type: 'image/x-icon', href: `${favicon}` },
         ]}
       />
       <Helmet>
