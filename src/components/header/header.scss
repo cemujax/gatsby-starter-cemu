@@ -6,6 +6,7 @@ header {
   text-align: center;
   @include box-shadow(4);
   a {
+    color: $color-black;
     font-weight: 600;
     &:hover {
       color: $color-dark-gray;

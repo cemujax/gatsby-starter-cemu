@@ -22,8 +22,3 @@ body {
 .wrapper {
   @include main-wrapper();
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}

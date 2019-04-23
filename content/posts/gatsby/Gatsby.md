@@ -12,11 +12,11 @@ tags: ['gatsby']
 > Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps
 
 ## How Gatsby works
-Pull data from anywhere
+[Pull data from anywhere]
 ![](./images/gatsby works.jpg)
 
 ## Ecosystem
-Plugins & Starters
+`Plugins & Starters`
 
 ### Plugins
 Plugins are packages that extend Gatsby sites. 
@@ -28,4 +28,3 @@ They can source content, transform data, and more!
 Starters are Gatsby sites that are preconfigured for different use cases to give you a head start for your project.
 
 [Browse Starters](https://www.gatsbyjs.org/starters/?v=2)
-

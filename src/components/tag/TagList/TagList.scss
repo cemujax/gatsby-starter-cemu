@@ -8,6 +8,7 @@
   justify-content: center;
 
   a {
+    color: $color-black;
     border: 1px solid $color-black;
     @include border-radius(0.2rem);
     margin: 0 0.5rem;
