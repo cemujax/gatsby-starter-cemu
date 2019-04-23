@@ -5,7 +5,11 @@ module.exports = {
   author: `cemujax`,
   introduction: `introduction`,
   siteUrl: `https://gatsby-starter-cemu.netlify.com`,
-  icon: `static/icon.png`, // favicon
+  /**
+   * Located in the Static folder
+   */
+  icon: `/icon.png`, // favicon
+  authorImage: `/profile.png`, // bio image
   backgroundColor: `#ffffff`,
   themeColor: `#2196F3`,
   comments: {

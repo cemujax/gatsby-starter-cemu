@@ -68,7 +68,7 @@ module.exports = {
         background_color: siteMetaConfig.backgroundColor,
         theme_color: siteMetaConfig.themeColor,
         display: `standalone`,
-        icon: siteMetaConfig.icon,
+        icon: `static/${siteMetaConfig.icon}`,
       },
     },
     {
