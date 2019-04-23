@@ -49,6 +49,8 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-plugin-catch-links`,
+          `gatsby-remark-emoji`,
         ],
       },
     },
@@ -69,6 +71,12 @@ module.exports = {
         theme_color: siteMetaConfig.themeColor,
         display: `standalone`,
         icon: `static/${siteMetaConfig.icon}`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     {
