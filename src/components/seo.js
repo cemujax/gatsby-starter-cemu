@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import favicon from '../../static/favicon.ico'
-
 function SEO({
   description,
   lang,
@@ -26,12 +24,14 @@ function SEO({
             author
             siteUrl
             pathPrefix
+            icon
           }
         }
       }
     `
   )
   const metaDescription = description || site.siteMetadata.description
+  const favicon = site.siteMetadata.icon || ''
   const seo = {
     title: title || site.siteMetadata.title,
     url: pathSlug
