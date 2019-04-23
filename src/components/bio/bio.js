@@ -1,20 +1,25 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-
+import { StaticQuery, graphql, Link, withPrefix } from 'gatsby'
 import './bio.scss'
 
 const Bio = () => (
   <StaticQuery
     query={bioQuery}
     render={data => {
-      const { author, social, introduction } = data.site.siteMetadata
+      const {
+        author,
+        social,
+        introduction,
+        authorImage,
+      } = data.site.siteMetadata
       return (
         <div className="bio">
-          <Img
+          <img
+            src={withPrefix(authorImage)}
             className="author-image"
-            fixed={data.avatar.childImageSharp.fixed}
-            alt="author"
+            width="70"
+            height="70"
+            alt={author}
           />
           <div className="author-description">
             <Link to={'/about'} className="author-name">
@@ -79,17 +84,11 @@ const Bio = () => (
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/sample-profile.png/" }) {
-      childImageSharp {
-        fixed(width: 80, height: 80) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author
         introduction
+        authorImage
         social {
           twitter
           github

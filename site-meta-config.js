@@ -10,6 +10,7 @@ module.exports = {
    */
   icon: `/icon.png`, // favicon
   authorImage: `/profile.png`, // bio image
+
   backgroundColor: `#ffffff`,
   themeColor: `#2196F3`,
   comments: {

@@ -10,7 +10,8 @@
 
   .author-image {
     margin: 5px;
-    min-width: 80px;
+    min-width: 70px;
+    @include border-radius(1rem);
   }
 
   .author-description {

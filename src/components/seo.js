@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, withPrefix } from 'gatsby'
 
 function SEO({
   description,
@@ -31,7 +31,7 @@ function SEO({
     `
   )
   const metaDescription = description || site.siteMetadata.description
-  const favicon = site.siteMetadata.icon || ''
+  const favicon = withPrefix(site.siteMetadata.icon) || ''
   const seo = {
     title: title || site.siteMetadata.title,
     url: pathSlug
