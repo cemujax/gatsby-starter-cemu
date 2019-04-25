@@ -23,8 +23,8 @@
       margin-left: 1rem;
       color: $color-white;
       @include border-radius(0.2rem);
-      border: 1px solid #f88307;
-      background: $color-orange;
+      border: 1px solid $color-dark-gray;
+      background: $color-blue;
       padding: 0.1rem 0.2rem;
     }
   }
