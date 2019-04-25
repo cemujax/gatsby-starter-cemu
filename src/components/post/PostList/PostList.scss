@@ -9,7 +9,7 @@
     @include border-default();
     outline: none;
 
-    a {
+    .post-item-link {
       color: $color-black;
       .body {
         margin: {
