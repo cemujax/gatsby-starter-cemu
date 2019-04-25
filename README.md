@@ -5,6 +5,7 @@ Blog Starter Template using [Gatsby](https://www.gatsbyjs.org/).
 
 View the demo at [gatsby-starter-cemu](https://gatsby-starter-cemu.netlify.com/)
 
+![gatsby-starter-cemu IndexPage](https://i.imgur.com/eG3HXGT.jpg)
 ## Features
 - Code syntax highlighting
 - Emoji
