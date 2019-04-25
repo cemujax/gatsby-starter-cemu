@@ -64,7 +64,7 @@ export const query = graphql`
       excerpt(pruneLength: 160)
       frontmatter {
         title
-        date(formatString: "YYYY-MM-DD HH:MM")
+        date(formatString: "YYYY-MM-DD")
         category
         tags
       }
