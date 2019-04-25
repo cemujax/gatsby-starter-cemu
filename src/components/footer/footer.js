@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer">
     <hr />
     <div className="rss-feed">
-      <a href="/rss.xml">
+      <a href="/rss.xml" aria-label="rss">
         <svg
           stroke="currentColor"
           fill="#FFA500"
